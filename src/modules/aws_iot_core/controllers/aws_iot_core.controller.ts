@@ -7,10 +7,7 @@ import { AwsIotCoreFailResponseDto, AwsIotCoreSuccessResponseDto } from "../dto/
 @ApiTags("AWS IoT Core")
 @Controller("aws_iot_core")
 export class SmartPlugController {
-  constructor(
-    private readonly awsIotCoreService: AwsIotCoreService
-  ) {
-  }
+  constructor(private readonly awsIotCoreService: AwsIotCoreService) {}
 
   @HttpCode(HttpStatus.OK)
   @Post("publish")

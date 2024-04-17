@@ -1,18 +1,17 @@
-import { Injectable, OnModuleInit } from '@nestjs/common';
-import { LoggerService } from '../../logger/services/logger.service';
-import * as AWS from 'aws-sdk';
+import { Injectable, OnModuleInit } from "@nestjs/common";
+import { LoggerService } from "../../logger/services/logger.service";
+import * as AWS from "aws-sdk";
 
 @Injectable()
 export class Aws_IoT_Core_Publish_Service implements OnModuleInit {
-  constructor(private readonly logger: LoggerService) {
-  }
+  constructor(private readonly logger: LoggerService) {}
 
   onModuleInit() {
-    this.logger.info('onModuleInit called...', `${this.constructor.name}.onModuleInit():`);
+    this.logger.info("onModuleInit called...", `${this.constructor.name}.onModuleInit():`);
   }
 
   public async publishToAws(topic: string, data: any) {
-      // topic= `xyz/subscribe/${topic}`;
+    // topic= `xyz/subscribe/${topic}`;
     try {
       AWS.config.update({
         region: process.env.AWS_REGION,

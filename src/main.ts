@@ -1,15 +1,7 @@
 
 import { NestFactory } from "@nestjs/core";
-import { rateLimit } from "express-rate-limit";
 import { AppModule } from "./app.module";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
-
-const limiter = rateLimit({
-  //from per ip we allow max 5/min
-  windowMs: 1000 * 60, // 1 minutes
-  max: 50, // Maximum 5 requests per IP in 15 minutes
-  message: "Too many requests, please try again later."
-});
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
