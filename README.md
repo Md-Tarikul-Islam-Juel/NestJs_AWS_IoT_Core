@@ -54,7 +54,7 @@ Accessible at **http://localhost:3000/api**
    - Run `yarn install` or `npm install` to install project dependencies.
 
 4. **Import Postman Collection:**
-   - Locate `NestJs_webSocket.postman_collection.json` in `documents/postman/`.
+   - Locate `NestJs_aws_iot_core.postman_collection.json` in `documents/postman/`.
    - Import the collection into Postman.
 
 5. **Run the Project:**
